@@ -1,0 +1,181 @@
+// Main CSS File
+$color-primary: #7c276f;
+$color-secondary: #30162c;
+$color-white: #fff;
+$color-black: #000;
+$color-background: linear-gradient(45deg, $color-primary, $color-secondary);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 3rem;
+  font-family: europa, sans-serif;
+  box-sizing: border-box;
+}
+
+.body-container {
+  box-shadow: 0 0.25rem 0.5rem rgba($color-black, 0.1);
+}
+
+.header {
+  position: relative;
+  padding: 3rem;
+  height: 40vh;
+  min-height: 30rem;
+  background: $color-background;
+  color: $color-white;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  &__logo {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    font-size: 6.2rem;
+    p {
+      margin: 0;
+      img {
+        width: 60px;
+      }
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__name {
+    font-size: 5.2rem;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    font-size: 3.4rem;
+    margin-top: 0;
+  }
+  &__container {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    @media (max-width: 992px) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    height: 30vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+// About
+.about-section {
+  max-width: 1140px;
+  margin: 0 auto 3rem auto;
+  &__text {
+    padding: 0 3rem;
+  }
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+  }
+  &__content {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+  &__name {
+    font-size: 3.2rem;
+  }
+}
+
+// Skills
+.skills {
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    &--item {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-grow: 1;
+      flex: 1 1 33.33333%;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &--img {
+      filter: grayscale(100%);
+      transition: filter 0.4s ease-in-out;
+      padding: 2rem;
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: $color-background;
+  padding: 3rem;
+}
+
+.footer-social {
+  &__title {
+    color: $color-white;
+    font-size: 3.4rem;
+    text-align: center;
+    margin-top: 0;
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 0;
+    height: 100%;
+    max-width: 20%;
+    margin: 0 auto;
+    &--link {
+      display: block;
+      @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    &--item {
+      display: block;
+    }
+  }
+}
+
+// Tail
+.tail {
+  background: linear-gradient(
+    45deg,
+    rgba(221, 221, 221, 0.7),
+    rgba(245, 244, 244, 0.7)
+  );
+  padding: 2.2rem;
+  text-align: right;
+  font-size: 1.2rem;
+  &--developer {
+    text-decoration: none;
+    color: firebrick;
+  }
+  .heart-icon {
+    width: 15px;
+    height: 15px;
+    vertical-align: bottom;
+    transform: rotateZ(-90deg);
+  }
+}
